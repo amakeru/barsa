@@ -1,0 +1,47 @@
+.last-news {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto auto 0;
+  color: #fff;
+
+  &__item {
+    position: relative;
+    width: 100%;
+    padding-top: 16 / 13 + em;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+    border-top: 1px solid #fff;
+
+    @include media(799px, max-width) {
+      &:not(:last-of-type) {
+        margin-bottom: 24 / 13 + em;
+      }
+    }
+
+    @include media(800px) {
+      width: 29%;
+    }
+
+    &:hover {
+      border-color: $color-2;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.3em;
+    font-family: $font-2;
+  }
+
+  &__intro {
+    margin: 0;
+  }
+}

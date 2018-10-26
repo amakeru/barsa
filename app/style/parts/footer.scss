@@ -1,0 +1,39 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 11px;
+  color: #fff;
+}
+
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    font-size: 0;
+    text-decoration: none;
+  }
+
+  &__icon {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      fill: $color-2;
+    }
+  }
+}

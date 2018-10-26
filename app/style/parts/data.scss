@@ -1,0 +1,8 @@
+$color-2: #d3a352;
+$font-1: 'Ubuntu', 'Verdana', sans-serif;
+$font-2: 'Tenor Sans', 'Verdana', sans-serif;
+$sprite: url(/assets/llgroup/img/sprite.png) no-repeat;
+
+@mixin media($value1, $value2: min-width) {
+     @media only screen and ($value2: $value1) { @content; }
+}

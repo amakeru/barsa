@@ -1,0 +1,108 @@
+@import 'parts/data';
+@import 'parts/fonts';
+
+@import "../../bower_components/normalize.css/normalize.css";
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0 1.6em;
+	padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+}
+
+button {
+	box-sizing: border-box;
+	font-family: inherit;
+	color: inherit;
+	cursor: pointer;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+input,
+textarea {
+	box-sizing: border-box;
+	font-family: inherit;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+html,
+body {
+  height: 100%;
+	overflow: hidden;
+}
+
+body {
+  font-family: $font-1;
+}
+
+@import "parts/icons";
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	flex: 1 0 auto;
+}
+
+.svg-sprite {
+	display: none;
+}
+
+@import "parts/header";
+@import "parts/sidebar";
+@import "parts/home";
+@import "parts/last-news";
+@import "parts/footer";
+
+
+// helpers
+
+.hidden {
+	display: none;
+}

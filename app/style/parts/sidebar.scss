@@ -1,0 +1,110 @@
+.sidebar {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 20em;
+  height: 100vh;
+  overflow-y: auto;
+  text-align: center;
+  background: #1e1e1e;
+  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
+  transform: translateX(-100%);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.sidebar__wrapper {}
+
+.sidebar__logo {
+  display: inline-block;
+  padding-top: 32px;
+
+  img {
+    height: 180px;
+  }
+}
+
+.nav {
+  padding: 40 / 16 + em 0 20px;
+  text-align: left;
+  color: #fff;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/nav-restaurant.jpg") center/cover;
+      transition: opacity 0.3s ease-out;
+      opacity: 0;
+
+      &--menu {
+        background: url("../img/nav-menu.jpg") center/cover;
+      }
+
+      &--events {
+        background: url("../img/nav-events.jpg") center/cover;
+      }
+
+      &--contacts {
+        background: url("../img/nav-contacts.jpg") center/cover;
+      }
+
+      &--testimonials {
+        background: url("../img/nav-testimonials.jpg") center/cover;
+      }
+
+      .nav__item:hover & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 1.2em 4.5em;
+    font-weight: 300;
+    font-size: 0.75em; //12
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      position: relative;
+      display: block;
+      top: 1.2em; // padding-bottom у родителя
+      border-bottom: 1px solid #3d3d3d;
+    }
+  }
+
+  &__hide {
+    padding: 0;
+    font-size: 0;
+    border: 0;
+    background: none;
+
+    &-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+  }
+}
